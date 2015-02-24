@@ -1,0 +1,24 @@
+{
+    "name": "hpkns/laravel-config",
+    "description": "Create CSV files from Laravel lang files and vice-versa.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Hupkens",
+            "email": "thomas@hupkens.be"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Hpkns\\Config\\": "src/Hpkns/Config"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "require": {
+        "illuminate/support": "~5.0",
+        "league/csv": "~7.0"
+    },
+    "minimum-stability": "stable"
+}
