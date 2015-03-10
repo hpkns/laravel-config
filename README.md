@@ -1,5 +1,5 @@
-Laravel 5 config toot
+Laravel 5 config tool
 ====================
 
-Dump your Laravel 5 config files into CSV and vice-versa.
+Dump your Laravel 5 config / translations files into CSV and vice-versa.
 

@@ -8,6 +8,15 @@
             "email": "thomas@hupkens.be"
         }
     ],
+    "require": {
+        "illuminate/support": "~5.0",
+        "illuminate/foundation": "~5.0",
+        "league/csv": "~7.0",
+        "illuminate/console": "~5.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "~0.9"
+    },
     "autoload": {
         "psr-4": {
             "Hpkns\\Config\\": "src/Hpkns/Config"
@@ -15,10 +24,6 @@
         "files": [
             "src/helpers.php"
         ]
-    },
-    "require": {
-        "illuminate/support": "~5.0",
-        "league/csv": "~7.0"
     },
     "minimum-stability": "stable"
 }

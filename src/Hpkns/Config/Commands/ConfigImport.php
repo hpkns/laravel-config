@@ -40,13 +40,11 @@ class ConfigImport extends Command {
      *
      * @return \League\Csv\Reader
      */
-    public function getCSV()
+    public function getCSV($path)
     {
-        $csv = Reader::createFromPath(
-            base_path() . '/' . trim($this->option('input'), '/')
-        );
-        $csv->setDelimiter(';');
-        $csv->setFlags(\SplFileObject::READ_AHEAD|\SplFileObject::SKIP_EMPTY);
+        $csv = Reader::createFromPath($path);
+        $csv->setDelimiter(',');
+        $csv->setFlags(\SplFileObject::READ_AHEAD|\SplFileObject::SKIP_EMPTY);;
         return $csv;
     }
 
@@ -57,7 +55,9 @@ class ConfigImport extends Command {
 	 */
 	public function fire()
 	{
-        $csv = $this->getCSV();
+        $csv = $this->getCSV(
+            base_path() . '/' . trim($this->option('input'), '/')
+        );
         $template = file_get_contents(__DIR__ . '/../../../templates/config.txt');
         $timestamp = date('Y:m:s H-i-s', time());
         $langs = [];
